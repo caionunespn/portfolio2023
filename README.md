@@ -19,7 +19,7 @@ Este é o repositório do meu portfólio pessoal, onde apresento minhas habilida
 
 ```
 1. **Clonar o Repositório:**
-   git clone https://github.com/seu-usuario/nome-do-repositorio.git
+   git clone https://github.com/caionunespn/portfolio2023.git
 
 2. **Instalar Dependências:**
    cd nome-do-repositorio
