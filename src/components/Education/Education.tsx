@@ -29,9 +29,9 @@ const Education: React.FC = () => {
   ];
 
   return (
-    <section id="education" className="py-8 lg:py-24 bg-gray-50 w-full">
+    <section id="education" className="py-8 lg:py-24 bg-gray-50 w-full dark:bg-gray-900">
       <div className="container mx-auto px-4 lg:px-24 w-full">
-        <h2 className="text-3xl lg:text-4xl font-semibold mb-4 lg:mb-12 text-center">{languageTexts.title}</h2>
+        <h2 className="text-3xl lg:text-4xl font-semibold mb-4 lg:mb-12 text-center dark:text-white">{languageTexts.title}</h2>
         <ol className="items-center sm:flex w-full p-4 lg:p-0">
           {educations.map((education, index) => (
             <EducationCard

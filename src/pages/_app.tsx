@@ -1,5 +1,6 @@
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app';
+import { ThemeProvider } from "next-themes"
 import { Inter } from 'next/font/google';
 import Head from 'next/head';
 
@@ -13,10 +14,13 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
     <Head>
       <title>Caio Nunes</title>
+      <link rel="icon" href="/favicon.ico" sizes="any" />
     </Head>
-    <main className={`${inter.variable}`}>
-      <Component {...pageProps} />
-    </main>
+    <ThemeProvider attribute="class">
+      <main className={`${inter.variable}`}>
+        <Component {...pageProps} />
+      </main>
+    </ThemeProvider>
     </>
   );
 }

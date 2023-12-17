@@ -47,7 +47,7 @@ const ProjectCard: React.FC<Project> = ({ name, technologies, description, image
   return (
     <div ref={cardRef}>
       <motion.div
-        className={`relative overflow-hidden bg-white rounded-xl shadow-md w-full max-w-5xl mx-auto mt-8 p-4 lg:p-[48px] backdrop-blur-lg backdrop-filter bg-opacity-95 ${
+        className={`relative overflow-hidden bg-opacity-100 bg-white dark:bg-gray-600 rounded-xl shadow-md w-full max-w-5xl mx-auto mt-8 p-4 lg:p-[48px] backdrop-blur-lg backdrop-filter ${
           isVisible ? 'scale-in' : ''
         }`}
         initial={{ scale: 0 }}
@@ -56,10 +56,10 @@ const ProjectCard: React.FC<Project> = ({ name, technologies, description, image
       >
       <div className="flex justify-between items-start mb-6">
         <div className="h-fit-content w-[100%] lg:w-[50%]">
-          <h3 className="text-2xl lg:text-4xl font-semibold mb-4">{name}</h3>
+          <h3 className="text-2xl lg:text-4xl font-semibold mb-4 dark:text-white">{name}</h3>
           <div className="flex flex-wrap gap-2 mb-4">
             {technologies.map((tech, index) => (
-              <span key={index} className="px-2 py-1 bg-blue-200 text-violet-800 rounded-md text-lg">
+              <span key={index} className="px-2 py-1 bg-blue-200 text-gray-800 rounded-md text-lg">
                 {tech}
               </span>
             ))}
@@ -69,12 +69,12 @@ const ProjectCard: React.FC<Project> = ({ name, technologies, description, image
             src={image}
             alt={`Screenshot do ${name}`}
           />
-          <p className="text-lg text-gray-700 my-2">{description}</p>
+          <p className="text-lg text-gray-700 my-2 dark:text-white">{description}</p>
           <div className="mt-4">
-            <h4 className="font-semibold text-lg">{languageTexts.whatILearned}</h4>
+            <h4 className="font-semibold text-lg dark:text-white">{languageTexts.whatILearned}</h4>
             <div className="flex flex-wrap gap-2 mt-2">
               {learned.map((learn, index) => (
-                <span key={index} className="px-2 py-1 bg-green-200 text-green-800 rounded-md text-lg">
+                <span key={index} className="px-2 py-1 bg-green-200 text-green-900 rounded-md text-lg">
                   {learn}
                 </span>
               ))}

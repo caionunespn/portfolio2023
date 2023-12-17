@@ -79,24 +79,24 @@ const Contact: React.FC = () => {
   }, [controls]);
 
   return (
-    <section id="contact" className="py-12 bg-gray-50" ref={contactRef}>
+    <section id="contact" className="py-12 bg-gray-50 dark:bg-gray-900" ref={contactRef}>
       <motion.div
         className="container mx-auto px-4"
         animate={controls}
         initial={{ opacity: 0, y: 50 }}
         transition={{ duration: 0.5 }}
       >
-        <h2 className="text-4xl font-bold mb-8 text-center text-violet-600">{languageTexts.title}</h2>
-        <div className="max-w-md mx-auto bg-white rounded-md shadow-md p-6">
-          <p className="text-gray-700 text-lg mb-4">
+        <h2 className="text-4xl font-bold mb-8 text-center text-violet-600 dark:text-white">{languageTexts.title}</h2>
+        <div className="max-w-md mx-auto bg-white rounded-md shadow-md p-6 dark:bg-gray-500">
+          <p className="text-gray-700 text-lg mb-4 dark:text-white">
             {languageTexts.formDescription + ' '}
-            <a href="mailto:caionunes3000@gmail.com" className="text-violet-500 hover:underline">
+            <a href="mailto:caionunes3000@gmail.com" className="text-violet-500 dark:text-white dark:underline hover:underline">
               caionunes3000@gmail.com
             </a>
           </p>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
-              <label htmlFor="name" className="block text-gray-700 mb-1">
+              <label htmlFor="name" className="block text-gray-700 mb-1 dark:text-white">
                 {languageTexts.nameLabel}
               </label>
               <input
@@ -111,7 +111,7 @@ const Contact: React.FC = () => {
               />
             </div>
             <div>
-              <label htmlFor="email" className="block text-gray-700 mb-1">
+              <label htmlFor="email" className="block text-gray-700 mb-1 dark:text-white">
                 E-mail:
               </label>
               <input
@@ -126,7 +126,7 @@ const Contact: React.FC = () => {
               />
             </div>
             <div>
-              <label htmlFor="message" className="block text-gray-700 mb-1">
+              <label htmlFor="message" className="block text-gray-700 mb-1 dark:text-white">
                 {languageTexts.messageLabel}
               </label>
               <textarea
@@ -144,7 +144,7 @@ const Contact: React.FC = () => {
             <button
               type="submit"
               disabled={loading}
-              className="bg-violet-600 text-white px-6 py-3 rounded-md shadow-md hover:bg-violet-700 transition duration-300 ease-in-out w-full"
+              className="bg-gradient-to-r from-violet-500 to-violet-600 text-white px-6 py-3 rounded-full shadow-md hover:bg-violet-700 transition duration-300 ease-in-out w-full"
             >
               {languageTexts.buttonLabel}
             </button>

@@ -73,9 +73,9 @@ const Skills: React.FC<SkillsSectionProps> = () => {
   }, []);
 
   return (
-    <section id="skills" className="py-16 bg-gray-50">
+    <section id="skills" className="py-16 bg-gray-50 dark:bg-gray-900">
       <div className="container mx-auto px-4 flex flex-col max-w-7xl">
-        <h2 className="text-4xl font-semibold mb-8 self-center">Skills</h2>
+        <h2 className="text-4xl font-semibold mb-8 self-center dark:text-white">Skills</h2>
         <div className="grid grid-cols-2 lg:grid-cols-4 lg:grid-cols-6 gap-8">
           {skillsList.map((skill, index) => (
             <ColoredIcon
@@ -124,8 +124,10 @@ const ColoredIcon = React.forwardRef<HTMLDivElement, ColoredIconProps>(({
       variants={iconVariants}
       ref={ref}
     >
-      {React.cloneElement(icon as React.ReactElement<any>, { color, size })}
-      <span className="text-lg font-regular">{label}</span>
+      <div className="dark:bg-gray-50 dark:rounded-xl dark:p-1">
+        {React.cloneElement(icon as React.ReactElement<any>, { color, size })}
+      </div>
+      <span className="text-lg font-regular dark:text-white">{label}</span>
     </motion.div>
   );
 });

@@ -59,7 +59,7 @@ const Projects: React.FC = () => {
 
   return (
     <section id="projects" className="flex w-screen">
-      <div className="flex flex-col justify-center w-full p-8 lg:p-16 bg-gradient-to-r from-violet-500 to-violet-600">
+      <div className="flex flex-col justify-center w-full p-8 lg:p-16 bg-gradient-to-r from-violet-500 to-violet-600 dark:bg-gradient-to-b dark:from-gray-800 dark:to-gray-800">
         <motion.h2
           className="text-3xl lg:text-4xl font-semibold mb-2 lg:mb-8 self-center text-white"
           initial={{ opacity: 0, y: 20 }}

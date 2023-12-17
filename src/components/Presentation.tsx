@@ -8,6 +8,7 @@ import { getKeys } from '@/languages';
 import SwitchButton from './SwitchButton';
 import { FaGithub, FaLinkedin, FaRegSun, FaRegMoon } from 'react-icons/fa';
 import LanguageSelector from './LanguageSelector';
+import { useTheme } from 'next-themes';
 
 interface LinkButtonProps {
   link: string;
@@ -30,6 +31,7 @@ const LinkButton: React.FC<LinkButtonProps> = ({ link, children }) => {
 const Presentation: React.FC = () => {
   const router = useRouter();
   const languageTexts = getKeys("presentation", router.locale) as any;
+  const {theme, setTheme} = useTheme();
 
   return (
     <motion.section
@@ -40,15 +42,15 @@ const Presentation: React.FC = () => {
       transition={{ duration: 0.5 }}
     >
       <div className="absolute top-6 right-8 flex">
-        {/* <SwitchButton
-          contentChecked={<FaRegSun />}
-          contentUnchecked={<FaRegMoon />}
-          colorChecked='bg-blue-900'
-          colorUnchecked='bg-amber-400'
-        /> */}
+        <SwitchButton
+          contentChecked={<FaRegMoon />}
+          contentUnchecked={<FaRegSun />}
+          bgColor='bg-violet-600'
+          onSwitch={() => theme == "dark"? setTheme('light'): setTheme("dark")}
+        />
         <LanguageSelector />
       </div>
-      <div className="flex flex-col justify-center w-full bg-gray-50 px-8 pt-24 pb-8 lg:px-32">
+      <div className="flex flex-col justify-center w-full bg-gray-50 px-8 pt-24 pb-8 lg:px-32 dark:bg-gray-900">
         <motion.div
           className="relative"
           initial={{ opacity: 0, scale: 0.8 }}
@@ -57,7 +59,7 @@ const Presentation: React.FC = () => {
         >
           <div className="absolute top-2 left-2 bg-violet-600 w-32 h-32 lg:w-48 lg:h-48" />
           <Image
-            className="relative object-cover w-32 h-32 lg:w-48 lg:h-48"
+            className="relative object-cover w-32 h-32 lg:w-48 lg:h-48 dark:border-white dark:border-2"
             width="512"
             height="512"
             src="/profile.jpg"
@@ -65,7 +67,7 @@ const Presentation: React.FC = () => {
           />
         </motion.div>
         <motion.p
-          className="mt-8 font-bold leading-[1.2] text-2xl lg:text-5xl"
+          className="mt-8 font-bold leading-[1.2] text-2xl lg:text-5xl dark:text-white"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
@@ -73,7 +75,7 @@ const Presentation: React.FC = () => {
           {languageTexts.name} <span className="text-violet-500">Caio Nunes</span> :)
         </motion.p>
         <motion.p
-          className="mt-1 font-bold leading-[1.2] text-xl lg:text-4xl"
+          className="mt-1 font-bold leading-[1.2] text-xl lg:text-4xl dark:text-white"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
@@ -81,7 +83,7 @@ const Presentation: React.FC = () => {
           {languageTexts.position}
         </motion.p>
         <motion.p
-          className="leading-[1.2] text-xl lg:text-3xl mt-1 lg:mt-2"
+          className="leading-[1.2] text-xl lg:text-3xl mt-1 lg:mt-2 dark:text-white"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
