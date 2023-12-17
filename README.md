@@ -18,14 +18,14 @@ Este é o repositório do meu portfólio pessoal, onde apresento minhas habilida
 ## Como Executar o Projeto Localmente
 
 ```
-1. **Clonar o Repositório:**
+1. Clonar o Repositório:
    git clone https://github.com/caionunespn/portfolio2023.git
 
-2. **Instalar Dependências:**
-   cd nome-do-repositorio
+2. Instalar Dependências:
+   cd portfolio2023
    npm install
 
-3. **Rodar o Projeto:**
+3. Rodar o Projeto:
    npm run dev
    O projeto estará disponível em http://localhost:3000.
 ```
