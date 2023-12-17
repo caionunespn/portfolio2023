@@ -1,8 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import {RiMenu4Fill} from 'react-icons/ri';
 import HeaderButton from './HeaderButton';
+import { useRouter } from 'next/router';
+import { getKeys } from '@/languages';
 
 const Header: React.FC = () => {
+  const router = useRouter();
+  const languageTexts = getKeys("header", router.locale) as any;
+
   const [activeSection, setActiveSection] = useState('');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -15,12 +20,12 @@ const Header: React.FC = () => {
     '#contact',
   ];
   const sectionsLabel = [
-    'Início',
-    'Projetos',
+    languageTexts.presentation,
+    languageTexts.projects,
     'Skills',
-    'Profissional',
-    'Acadêmico',
-    'Contato',
+    languageTexts.professional,
+    languageTexts.education,
+    languageTexts.contact ,
   ];
 
   const handleScroll = () => {
@@ -62,8 +67,8 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="fixed top-3 md:top-5 z-50 md:shadow-lg rounded-xl">
-      <div className="flex justify-between items-center p-4 md:hidden">
+    <header className="fixed lg:top-5 z-50 lg:shadow-lg rounded-xl w-full lg:w-auto">
+      <div className="flex justify-between items-center p-4 lg:hidden">
         <button
           className="bg-gray-50 rounded-full p-2 text-gray-600 focus:outline-none focus:text-gray-900"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -73,7 +78,7 @@ const Header: React.FC = () => {
       </div>
 
       {isMobileMenuOpen && (
-        <nav className="bg-gray-50 py-4 px-2 md:hidden">
+        <nav className="bg-gray-50 py-4 px-2 lg:hidden">
           <ul className="flex flex-col items-center">
             {sections.map((section, index) => (
               <HeaderButton
@@ -88,7 +93,7 @@ const Header: React.FC = () => {
         </nav>
       )}
 
-      <nav className="hidden md:flex justify-center">
+      <nav className="hidden lg:flex justify-center">
         <ul className="flex">
           {sections.map((section, index) => (
             <HeaderButton

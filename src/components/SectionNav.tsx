@@ -39,7 +39,7 @@ const SectionNav: React.FC = () => {
   };
 
   return (
-    <div className="fixed top-[85%] left-[96%] transform -translate-y-1/2 flex flex-col justify-center items-center hidden  md:flex">
+    <div className="fixed top-[85%] left-[96%] transform -translate-y-1/2 flex flex-col justify-center items-center hidden  lg:flex">
       {sections.map((section, index) => (
         <div key={index}>
             <div

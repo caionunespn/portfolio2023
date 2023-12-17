@@ -1,0 +1,93 @@
+{
+    "header": {
+        "presentation": "Início",
+        "projects": "Projetos",
+        "professional": "Profissional",
+        "education": "Acadêmico",
+        "contact": "Contato"
+    },
+    "presentation": {
+        "profilePhoto": "Foto de perfil de Caio Nunes",
+        "name": "Oi! Me chamo",
+        "position": "Sou Desenvolvedor Full Stack",
+        "stack": "Trabalho com ReactJS, React Native, Flutter, Django e NodeJS"
+    },
+    "projects": {
+        "title": "Meus Projetos",
+        "whatILearned": "O que aprendi:",
+        "agnesEscola": {
+            "description": "Essa aplicação foi desenvolvida para a disciplina que integra disciplinas do 7° semestre da faculdade. Ela é uma extensão da aplicação AGNES, voltada para ajudar mulheres trans a encontrarem escolas que estão alinhadas com o respeito aos direitos das pessoas trans.",
+            "learned": ["Web scraping", "Testes automatizados", "Gerenciamento de projetos"]
+        },
+        "agnes": {
+            "description": "Essa aplicação foi desenvolvida para a disciplina Tópicos Avançados em Design de Interfaces Gráficas. O objetivo da aplicação é fornecer uma rede de apoio que conecta mulheres trans estudantes do ensino médio com suas escolas. Através da aplicação, elas têm diversas ferramentas disponíveis para se comunicar como postagens de outras estudantes, denúncia para a escola, dentre outras",
+            "learned": ["Arquitetura de sistemas", "Glassmorphism", "Gerenciamento de projetos"]
+        },
+        "emergency": {
+            "description": "Essa aplicação foi desenvolvida para a disciplina Programação para Dispositivos Móveis. O objetivo da aplicação é salvar no sistema contatos de emergência que podem ser discados rapidamente.",
+            "learned": ["Desenvovimento nativo (Android)", "Acesso a recursos nativos", "Firebase"]
+        },
+        "smdCarpool": {
+            "description": "Essa aplicação foi desenvolvido no projeto que integra disciplinas do 3° semestre da faculdade. O objetivo da aplicação é ser utilizada para gerenciamento de caronas de estudantes do curso Sistemas e Mídias Digitais da Universidade Federal do Ceará. Nela, motoristas e passageiros podem se cadastrar para realizarem essa parceria.",
+            "learned": ["Desenvolvimento híbrido", "Material Design", "Desenvolvimento de API Rest", "Integração de APIs externas", "Gerenciamento de projetos"]
+        },
+        "notitas": {
+            "description": "Essa é uma aplicação web que foi desenvolvida no projeto que integra disciplinas do 2° semestre da faculdade. O objetivo da aplicação é ser utilizada como recurso criativo para crianças criarem músicas na disciplina de Música da Unidade Universitária de Educação Infantil (UUNDC).",
+            "learned": ["Criação de MVPs", "Conceitos básicos de desenvolvimento de WebApps", "Gerenciamento de projetos"]
+        },
+        "satyr": {
+            "description": "Esse jogo foi desenvolvido no projeto que integra disciplinas do 1° semestre da faculdade. A temática do jogo giram em torno de Satyr, um sátiro defensor da natureza que desperta para lutar contra a corporação Ômega, que tem desmatado florestas com propósitos malignos.",
+            "learned": ["Conceitos básicos de desenvolvimento de jogos", "Gerenciamento de projetos"]
+        }
+    },
+    "experience": {
+        "title": "Experiências Profissionais",
+        "suma": {
+            "startDate": "Dezembro de 2022",
+            "endDate": "Presente",
+            "position": "Desenvolvedor Full Stack",
+            "description": "Nesse cargo, desenvolvo aplicações para plataformas web e mobile, utilizando Flutter e React, e integro com APIs REST e bancos de dados PostgreSQL. Além disso, participo de todo o ciclo de desenvolvimento, desde a análise de requisitos até os testes e a implantação."
+        },
+        "devari": {
+            "startDate": "Agosto de 2019",
+            "endDate": "Novembro de 2022",
+            "position": "Desenvolvedor Full Stack",
+            "description": "Na Devari Tecnologia, exerci a função de Desenvolvedor Full Stack, onde estive envolvido na criação de aplicações web e mobile. Utilizei um leque diversificado de tecnologias, para desenvolver soluções inovadoras e funcionais."
+        },
+        "iplanfor": {
+            "startDate": "Outubro de 2015",
+            "endDate": "Agosto de 2016",
+            "position": "Estagiário de TI",
+            "description": "Durante meu período como Estagiário de TI no IPLANFOR, contribuí ativamente no desenvolvimento de mídias, diagramação de processos e produção de documentações."
+        }
+    },
+    "education": {
+        "title": "Formação Acadêmica",
+        "tech": {
+            "institutionName": "Instituto Federal de Educação, Ciência e Tecnologia do Ceará",
+            "degree": "Técnico em Informática",
+            "endDate": "2016"
+        },
+        "bach": {
+            "institutionName": "Universidade Federal do Ceará",
+            "degree": "Bacharelado em Sistemas e Mídias Digitais",
+            "endDate": "2022"
+        },
+        "master": {
+            "institutionName": "Universidade Federal do Ceará",
+            "degree": "Mestrado em Ciência da Computação",
+            "endDate": "Presente"
+        }
+    },
+    "contact": {
+        "title": "Vamos tomar um café!",
+        "formDescription": "Me manda uma mensagem através do e-mail",
+        "nameLabel": "Nome:",
+        "messageLabel": "Mensagem:",
+        "buttonLabel": "Enviar mensagem"
+    },
+    "footer": {
+        "rights": "Todos direitos reservados.",
+        "developed": "Desenvolvido com NextJS"
+    }
+}

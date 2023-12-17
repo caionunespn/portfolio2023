@@ -7,19 +7,16 @@ export interface Education {
     endDate: string;
 }
 
-interface EducationCardProps extends Education {
-    key: number;
-}
+interface EducationCardProps extends Education {}
 
 const EducationCard: React.FC<EducationCardProps> = ({
     institutionName,
     degree,
     startDate,
     endDate,
-    key
 }) => {
   return (
-    <li key={key} className="relative mb-6 sm:mb-0 w-full">
+    <li className="relative mb-6 sm:mb-0 w-full">
         <div className="flex items-center">
             <div className="z-10 flex items-center justify-center w-6 h-6 bg-purple-100 rounded-full ring-0 ring-purple-600 sm:ring-8 shrink-0">
                 <svg className="w-2.5 h-2.5 text-purple-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">

@@ -1,0 +1,93 @@
+{
+    "header": {
+        "presentation": "Home",
+        "projects": "Projects",
+        "professional": "Professional",
+        "education": "Education",
+        "contact": "Contact"
+    },
+    "presentation": {
+        "profilePhoto": "Profile photo of Caio Nunes",
+        "name": "Hey! I'm",
+        "position": "I'm a Full Stack Developer",
+        "stack": "My currently stack is ReactJS, React Native, Flutter, Django and NodeJS"
+    },
+    "projects": {
+        "title": "Projects",
+        "whatILearned": "What I learned:",
+        "agnesEscola": {
+            "description": "This app was developed as the 7th semester project of my graduation. It is an extension of the AGNES app, aimed at helping trans women find schools that are aligned with respect for the rights of trans people.",
+            "learned": ["Web scraping", "Automated tests", "Project Management"]
+        },
+        "agnes": {
+            "description": "This application was developed for the course Advanced Topics in Graphic Interface Design. The aim of the application is to provide a support network that connects trans women high school students with their schools. Through the app, they have various tools available to communicate, such as posts from other students, reporting to the school, among others",
+            "learned": ["Systems architecture", "Glassmorphism", "Project Management"]
+        },
+        "emergency": {
+            "description": "This application was developed for the course Programming for Mobile Devices. The aim of the application is to save emergency contacts in the system that can be dialed quickly.",
+            "learned": ["Native development (Android)", "Access to native resources", "Firebase"]
+        },
+        "smdCarpool": {
+            "description": "This app was developed as the 3rd semester project of my graduation. The aim of the application is to be used to manage rides for students on the Systems and Digital Media course at the Federal University of Ceará. In it, drivers and passengers can register to carry out this partnership.",
+            "learned": ["Hybrid development", "Material Design", "API Rest", "External APIs integration", "Project Management"]
+        },
+        "notitas": {
+            "description": "This app was developed as the 2nd semester project of my graduation. The aim of the application is to be used as a creative resource for children to create songs in the Music class at the University Unit for Early Childhood Education (UUNDC).",
+            "learned": ["MVP creation", "Basic concepts of WebApps development", "Project Management"]
+        },
+        "satyr": {
+            "description": "This game was developed as the 1st semester project of my graduation. The theme of the game revolves around Satyr, a satyr defender of nature who awakens to fight the Omega corporation, which has been clearing forests for evil purposes.",
+            "learned": ["Basic concepts of game development", "Project Management"]
+        }
+    },
+    "experience": {
+        "title": "Professional Experience",
+        "suma": {
+            "startDate": "December 2022",
+            "endDate": "Present",
+            "position": "Full Stack Developer",
+            "description": "In this role, I develop applications for web and mobile platforms, using Flutter and React, and integrate with REST APIs and PostgreSQL databases. I also take part in the entire development cycle, from requirements analysis to testing and deployment."
+        },
+        "devari": {
+            "startDate": "August 2019",
+            "endDate": "November 2022",
+            "position": "Full Stack Developer",
+            "description": "At Devari Tecnologia, I was involved in creating web and mobile applications. I used a diverse range of technologies to develop innovative and functional solutions."
+        },
+        "iplanfor": {
+            "startDate": "October 2015",
+            "endDate": "August 2016",
+            "position": "IT Intern",
+            "description": "During my time as an IT intern at IPLANFOR, I actively contributed to media development, process diagramming and documentation production."
+        }
+    },
+    "education": {
+        "title": "Education",
+        "tech": {
+            "institutionName": "Federal Institute of Education, Science and Technology of Ceará",
+            "degree": "IT Technician",
+            "endDate": "2016"
+        },
+        "bach": {
+            "institutionName": "Federal University of Ceará",
+            "degree": "Bachelor's Degree in Systems and Digital Media",
+            "endDate": "2022"
+        },
+        "master": {
+            "institutionName": "Federal University of Ceará",
+            "degree": "Master in Computer Science",
+            "endDate": "Present"
+        }
+    },
+    "contact": {
+        "title": "Let's have a coffee!",
+        "formDescription": "Send me a message through my e-mail",
+        "nameLabel": "Name:",
+        "messageLabel": "Message:",
+        "buttonLabel": "Send message"
+    },
+    "footer": {
+        "rights": "All rights reserved.",
+        "developed": "Developed with NextJS"
+    }
+}

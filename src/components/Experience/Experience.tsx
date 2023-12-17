@@ -1,35 +1,40 @@
 import React, {useState, useEffect, useRef} from 'react';
 import { motion, useAnimation } from 'framer-motion';
+import { useRouter } from 'next/router';
 import ExperienceCard, {Experience} from './ExperienceCard';
-
-const experiences: Experience[] = [
-  {
-    companyName: 'SUMA Connect',
-    position: 'Desenvolvedor Full Stack',
-    startDate: 'Dezembro de 2022',
-    endDate: 'Presente',
-    description: 'Nesse cargo, desenvolvo aplicações para plataformas web e mobile, utilizando Flutter e React, e integro com APIs REST e bancos de dados PostgreSQL. Além disso, participo de todo o ciclo de desenvolvimento, desde a análise de requisitos até os testes e a implantação.',
-    stack: ['ReactJS', 'React Native', 'Flutter', 'Django', 'PostgreSQL'],
-  },
-  {
-    companyName: 'Devari Tecnologia',
-    position: 'Desenvolvedor Full Stack',
-    startDate: 'Agosto de 2019',
-    endDate: 'Novembro de 2022',
-    description: 'Na Devari Tecnologia, exerci a função de Desenvolvedor Full Stack, onde estive envolvido na criação de aplicações web e mobile. Utilizei um leque diversificado de tecnologias, para desenvolver soluções inovadoras e funcionais.',
-    stack: ['ReactJS', 'React Native', 'Django', 'NodeJS', 'MongoDB', 'PostgreSQL'],
-  },
-  {
-    companyName: 'IPLANFOR - Instituto de Planejamento de Fortaleza',
-    position: 'Estagiário de TI',
-    startDate: 'Outubro de 2015',
-    endDate: 'Agosto de 2016',
-    description: 'Durante meu período como Estagiário de TI no IPLANFOR, contribuí ativamente no desenvolvimento de mídias, diagramação de processos e produção de documentações.',
-  },
-];
+import { getKeys } from '@/languages';
 
 const Experience: React.FC = () => {
+  const router = useRouter();
+  const languageTexts = getKeys("experience", router.locale) as any;
+
   const [inView, setInView] = useState<boolean[]>([]);
+
+  const experiences: Experience[] = [
+    {
+      companyName: 'SUMA Connect',
+      position: languageTexts.suma.position,
+      startDate: languageTexts.suma.startDate,
+      endDate: languageTexts.suma.endDate,
+      description: languageTexts.suma.description,
+      stack: ['ReactJS', 'React Native', 'Flutter', 'Django', 'PostgreSQL'],
+    },
+    {
+      companyName: 'Devari Tecnologia',
+      position: languageTexts.devari.position,
+      startDate: languageTexts.devari.startDate,
+      endDate: languageTexts.devari.endDate,
+      description: languageTexts.devari.description,
+      stack: ['ReactJS', 'React Native', 'Django', 'NodeJS', 'MongoDB', 'PostgreSQL'],
+    },
+    {
+      companyName: 'IPLANFOR - Instituto de Planejamento de Fortaleza',
+      position: languageTexts.devari.position,
+      startDate: languageTexts.devari.startDate,
+      endDate: languageTexts.devari.endDate,
+      description: languageTexts.devari.description,
+    },
+  ];
 
   const experienceControls = useAnimation();
   const stackControls = useAnimation();
@@ -94,9 +99,9 @@ const Experience: React.FC = () => {
   }, [inView]);
 
   return (
-    <section id="experience" className="p-4 md:px-24 md:py-12 bg-gray-50">
-      <div className="container mx-auto relative bg-gradient-to-r from-purple-500 to-purple-600 rounded-2xl p-4 w-full md:w-[80%]">
-        <h2 className="text-3xl md:text-4xl font-semibold mb-8 text-white">Experiências Profissionais</h2>
+    <section id="experience" className="p-4 lg:px-24 lg:py-12 bg-gray-50">
+      <div className="container mx-auto relative bg-gradient-to-r from-purple-500 to-purple-600 rounded-2xl p-4 w-full lg:w-[80%]">
+        <h2 className="text-3xl lg:text-4xl font-semibold mb-8 text-white">{languageTexts.title}</h2>
         <ol className="relative border-s border-white">
           {experiences.map((experience, index) => (
             <motion.div
