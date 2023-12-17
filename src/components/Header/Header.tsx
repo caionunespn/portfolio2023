@@ -62,7 +62,7 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="fixed w-full md:w-fit-content top-3 md:top-5 z-50 md:shadow-lg">
+    <header className="fixed top-3 md:top-5 z-50 md:shadow-lg rounded-xl">
       <div className="flex justify-between items-center p-4 md:hidden">
         <button
           className="bg-gray-50 rounded-full p-2 text-gray-600 focus:outline-none focus:text-gray-900"
