@@ -16,7 +16,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <title>Caio Nunes</title>
       <link rel="icon" href="/favicon.ico" sizes="any" />
     </Head>
-    <ThemeProvider attribute="class">
+    <ThemeProvider attribute="class" defaultTheme='light'>
       <main className={`${inter.variable}`}>
         <Component {...pageProps} />
       </main>
