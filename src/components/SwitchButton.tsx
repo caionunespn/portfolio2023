@@ -3,12 +3,13 @@ import { ReactNode, useState } from 'react';
 interface SwitchButtonProps{
   contentChecked: string | ReactNode;
   contentUnchecked: string | ReactNode;
+  initialState: boolean;
   bgColor: string;
   onSwitch(): void;
 };
 
-const SwitchButton: React.FC<SwitchButtonProps> = ({contentChecked, contentUnchecked, bgColor, onSwitch}) => {
-  const [checked, setChecked] = useState(false);
+const SwitchButton: React.FC<SwitchButtonProps> = ({contentChecked, contentUnchecked, initialState, bgColor, onSwitch}) => {
+  const [checked, setChecked] = useState(initialState);
 
   const toggleChecked = () => {
     setChecked(!checked);
