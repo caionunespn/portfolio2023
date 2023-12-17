@@ -46,7 +46,7 @@ const Presentation: React.FC = () => {
           contentChecked={<FaRegMoon />}
           contentUnchecked={<FaRegSun />}
           bgColor='bg-violet-600'
-          initialState={theme == 'light' ? false : true}
+          initialState={theme == 'dark' ? true : false}
           onSwitch={() => theme == "dark"? setTheme('light'): setTheme("dark")}
         />
         <LanguageSelector />
