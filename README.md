@@ -29,11 +29,3 @@ Este é o repositório do meu portfólio pessoal, onde apresento minhas habilida
    npm run dev
    O projeto estará disponível em http://localhost:3000.
 ```
-
-## Contribuição
-
-Contribuições são bem-vindas! Sinta-se à vontade para abrir um Pull Request ou Issue para sugestões, correções ou melhorias.
-
-## Licença
-
-Este projeto está licenciado sob a [MIT License](https://opensource.org/licenses/MIT) - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
