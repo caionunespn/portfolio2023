@@ -67,8 +67,8 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="fixed lg:top-5 z-50 lg:shadow-lg rounded-xl w-full lg:w-auto">
-      <div className="flex justify-between items-center p-4 lg:hidden">
+    <header className="fixed lg:top-5 z-50 lg:shadow-lg rounded-xl lg:w-auto">
+      <div className="flex lg:justify-between lg:items-center p-4 lg:hidden">
         <button
           className="bg-gray-50 rounded-full p-2 text-gray-600 focus:outline-none focus:text-gray-900"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -78,7 +78,7 @@ const Header: React.FC = () => {
       </div>
 
       {isMobileMenuOpen && (
-        <nav className="bg-gray-50 py-4 px-2 lg:hidden">
+        <nav className="bg-gray-500 py-4 px-2 lg:hidden w-screen">
           <ul className="flex flex-col items-center">
             {sections.map((section, index) => (
               <HeaderButton

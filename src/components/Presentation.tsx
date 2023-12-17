@@ -41,7 +41,7 @@ const Presentation: React.FC = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="absolute top-6 right-8 flex">
+      <div className="absolute top-6 right-4 lg:top-6 lg:right-8 flex">
         <SwitchButton
           contentChecked={<FaRegMoon />}
           contentUnchecked={<FaRegSun />}
