@@ -26,4 +26,6 @@ const HeaderButton: React.FC<HeaderButtonProps> = ({ sectionId, label, active, o
   );
 };
 
+HeaderButton.displayName = 'HeaderButton';
+
 export default HeaderButton;

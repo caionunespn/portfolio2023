@@ -43,4 +43,6 @@ const Education: React.FC = () => {
   );
 };
 
+Education.displayName = 'Education';
+
 export default Education;

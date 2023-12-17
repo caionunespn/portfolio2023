@@ -124,4 +124,6 @@ const Experience: React.FC = () => {
   );
 };
 
+Experience.displayName = 'Experience';
+
 export default Experience;

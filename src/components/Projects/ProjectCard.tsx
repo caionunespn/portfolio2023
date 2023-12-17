@@ -82,4 +82,6 @@ const ProjectCard: React.FC<Project> = ({ name, technologies, description, image
   );
 };
 
+ProjectCard.displayName = 'ProjectCard';
+
 export default ProjectCard;

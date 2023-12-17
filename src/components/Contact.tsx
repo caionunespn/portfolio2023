@@ -81,4 +81,6 @@ const Contact: React.FC = () => {
   );
 };
 
+Contact.displayName = 'Contact';
+
 export default Contact;

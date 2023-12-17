@@ -45,4 +45,6 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
   );
 };
 
+ExperienceCard.displayName = 'ExperienceCard';
+
 export default ExperienceCard;

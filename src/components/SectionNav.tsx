@@ -55,4 +55,6 @@ const SectionNav: React.FC = () => {
   );
 };
 
+SectionNav.displayName = 'SectionNav';
+
 export default SectionNav;

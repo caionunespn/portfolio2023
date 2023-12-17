@@ -78,4 +78,6 @@ const Projects: React.FC = () => {
   );
 };
 
+Projects.displayName = 'Projects';
+
 export default Projects;

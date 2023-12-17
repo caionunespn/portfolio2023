@@ -90,4 +90,6 @@ const Presentation: React.FC = () => {
   );
 };
 
+Presentation.displayName = 'Presentation';
+
 export default Presentation;

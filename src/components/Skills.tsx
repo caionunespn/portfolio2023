@@ -130,4 +130,6 @@ const ColoredIcon = React.forwardRef<HTMLDivElement, ColoredIconProps>(({
   );
 });
 
+Skills.displayName = 'Skills';
+
 export default Skills;

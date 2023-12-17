@@ -37,4 +37,6 @@ const EducationCard: React.FC<EducationCardProps> = ({
   );
 }
 
+EducationCard.displayName = 'EducationCard';
+
 export default EducationCard;
