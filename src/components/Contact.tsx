@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useRouter } from 'next/router';
 import { getKeys } from '@/languages';
@@ -9,11 +9,50 @@ const Contact: React.FC = () => {
 
   const controls = useAnimation();
   const contactRef = useRef<HTMLDivElement>(null);
+  const initialState = {
+    email: "",
+    name: "",
+    message: ""
+  };
+  const [loading, setLoading] = useState(false);
+  const [form, setForm] = useState(initialState);
+  const [success, setSuccess] = useState("");
+  const [error, setError] = useState("");
+
+  const handleChangeValue = (field: string, value: string) => {
+    setForm(previousState => ({...previousState, [field]: value}));
+  }
+
+  function validateEmail(email: string) {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+  }
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    if (!validateEmail(form.email)) return setError("E-mail inválido");
+
+    setLoading(true);
+    setError("");
+    setSuccess("");
     
-    console.log('Formulário enviado!');
+    fetch('/api/mail', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(form)
+    }).then((res) => {
+      setLoading(false);
+      if (res.status === 200) {
+        setForm(initialState);
+        setSuccess("Mensagem enviada com sucesso");
+      } else if (res.status === 400) {
+        setError("Ocorreu um erro no envio de e-mail");
+      }
+    })
   };
 
   useEffect(() => {
@@ -32,7 +71,7 @@ const Contact: React.FC = () => {
     };
 
     window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Verifica a visibilidade inicial
+    handleScroll();
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
@@ -47,11 +86,11 @@ const Contact: React.FC = () => {
         initial={{ opacity: 0, y: 50 }}
         transition={{ duration: 0.5 }}
       >
-        <h2 className="text-4xl font-bold mb-8 text-center text-purple-600">{languageTexts.title}</h2>
+        <h2 className="text-4xl font-bold mb-8 text-center text-violet-600">{languageTexts.title}</h2>
         <div className="max-w-md mx-auto bg-white rounded-md shadow-md p-6">
           <p className="text-gray-700 text-lg mb-4">
             {languageTexts.formDescription + ' '}
-            <a href="mailto:caionunes3000@gmail.com" className="text-purple-500 hover:underline">
+            <a href="mailto:caionunes3000@gmail.com" className="text-violet-500 hover:underline">
               caionunes3000@gmail.com
             </a>
           </p>
@@ -60,23 +99,52 @@ const Contact: React.FC = () => {
               <label htmlFor="name" className="block text-gray-700 mb-1">
                 {languageTexts.nameLabel}
               </label>
-              <input type="text" id="name" name="name" className="border rounded-md px-3 py-2 w-full" required />
+              <input
+                disabled={loading}
+                value={form.name}
+                onChange={(e) => handleChangeValue("name", e.target.value)}
+                type="text"
+                id="name"
+                name="name"
+                className="border rounded-md px-3 py-2 w-full"
+                required
+              />
             </div>
             <div>
               <label htmlFor="email" className="block text-gray-700 mb-1">
                 E-mail:
               </label>
-              <input type="email" id="email" name="email" className="border rounded-md px-3 py-2 w-full" required />
+              <input
+                disabled={loading}
+                value={form.email}
+                onChange={(e) => handleChangeValue("email", e.target.value)}
+                type="email"
+                id="email"
+                name="email"
+                className="border rounded-md px-3 py-2 w-full"
+                required
+              />
             </div>
             <div>
               <label htmlFor="message" className="block text-gray-700 mb-1">
                 {languageTexts.messageLabel}
               </label>
-              <textarea id="message" name="message" className="border rounded-md px-3 py-2 w-full" required></textarea>
+              <textarea
+                disabled={loading}
+                value={form.message}
+                onChange={(e) => handleChangeValue("message", e.target.value)}
+                id="message"
+                name="message"
+                className="border rounded-md px-3 py-2 w-full"
+                required
+              />
             </div>
+            {success && <p className="text-sm text-green-800 my-2">{success}</p>}
+            {error && <p className="text-sm text-red-800 my-2">{error}</p>}
             <button
               type="submit"
-              className="bg-purple-600 text-white px-6 py-3 rounded-md shadow-md hover:bg-purple-700 transition duration-300 ease-in-out w-full"
+              disabled={loading}
+              className="bg-violet-600 text-white px-6 py-3 rounded-md shadow-md hover:bg-violet-700 transition duration-300 ease-in-out w-full"
             >
               {languageTexts.buttonLabel}
             </button>

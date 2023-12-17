@@ -100,7 +100,7 @@ const Experience: React.FC = () => {
 
   return (
     <section id="experience" className="p-4 lg:px-24 lg:py-12 bg-gray-50">
-      <div className="container mx-auto relative bg-gradient-to-r from-purple-500 to-purple-600 rounded-2xl p-4 w-full lg:w-[80%]">
+      <div className="container mx-auto relative bg-gradient-to-r from-violet-500 to-violet-600 rounded-2xl p-4 w-full lg:w-[80%]">
         <h2 className="text-3xl lg:text-4xl font-semibold mb-8 text-white">{languageTexts.title}</h2>
         <ol className="relative border-s border-white">
           {experiences.map((experience, index) => (

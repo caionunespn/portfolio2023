@@ -44,7 +44,7 @@ const SectionNav: React.FC = () => {
         <div key={index}>
             <div
             className={`w-4 h-4 rotate-45 cursor-pointer transition duration-300 ease-in-out ${
-                activeSection === index ? 'bg-purple-400' : 'bg-gray-300 mb-3'
+                activeSection === index ? 'bg-violet-400' : 'bg-gray-300 mb-3'
             }`}
             onClick={() => scrollToSection(index)}
             ></div>

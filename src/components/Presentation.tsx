@@ -20,7 +20,7 @@ const LinkButton: React.FC<LinkButtonProps> = ({ link, children }) => {
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex justify-center items-center bg-gradient-to-r from-purple-500 to-purple-600 px-4 py-2 text-lg lg:text-xl mr-4 hover:bg-purple-600 hover:underline text-white font-semibold py-2 px-4 rounded-full transition duration-300 ease-in-out"
+      className="flex justify-center items-center bg-gradient-to-r from-violet-500 to-violet-600 px-4 py-2 text-lg lg:text-xl mr-4 hover:bg-violet-600 hover:underline text-white font-semibold py-2 px-4 rounded-full transition duration-300 ease-in-out"
     >
       {children}
     </a>
@@ -55,7 +55,7 @@ const Presentation: React.FC = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
-          <div className="absolute top-2 left-2 bg-purple-600 w-32 h-32 lg:w-48 lg:h-48" />
+          <div className="absolute top-2 left-2 bg-violet-600 w-32 h-32 lg:w-48 lg:h-48" />
           <Image
             className="relative object-cover w-32 h-32 lg:w-48 lg:h-48"
             width="512"
@@ -70,7 +70,7 @@ const Presentation: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
         >
-          {languageTexts.name} <span className="text-purple-500">Caio Nunes</span> :)
+          {languageTexts.name} <span className="text-violet-500">Caio Nunes</span> :)
         </motion.p>
         <motion.p
           className="mt-1 font-bold leading-[1.2] text-xl lg:text-4xl"
@@ -81,7 +81,7 @@ const Presentation: React.FC = () => {
           {languageTexts.position}
         </motion.p>
         <motion.p
-          className="leading-[1.2] text-xl lg:text-4xl mt-1"
+          className="leading-[1.2] text-xl lg:text-3xl mt-1 lg:mt-2"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}

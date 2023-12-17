@@ -59,7 +59,7 @@ const ProjectCard: React.FC<Project> = ({ name, technologies, description, image
           <h3 className="text-2xl lg:text-4xl font-semibold mb-4">{name}</h3>
           <div className="flex flex-wrap gap-2 mb-4">
             {technologies.map((tech, index) => (
-              <span key={index} className="px-2 py-1 bg-blue-200 text-purple-800 rounded-md text-lg">
+              <span key={index} className="px-2 py-1 bg-blue-200 text-violet-800 rounded-md text-lg">
                 {tech}
               </span>
             ))}
