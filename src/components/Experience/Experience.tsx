@@ -29,10 +29,10 @@ const Experience: React.FC = () => {
     },
     {
       companyName: 'IPLANFOR - Instituto de Planejamento de Fortaleza',
-      position: languageTexts.devari.position,
-      startDate: languageTexts.devari.startDate,
-      endDate: languageTexts.devari.endDate,
-      description: languageTexts.devari.description,
+      position: languageTexts.iplanfor.position,
+      startDate: languageTexts.iplanfor.startDate,
+      endDate: languageTexts.iplanfor.endDate,
+      description: languageTexts.iplanfor.description,
     },
   ];
 
